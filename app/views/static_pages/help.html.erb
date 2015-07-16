@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>E-Shopper</title>
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +81 080 4481 1168</a></li>
+								<li><a href="mailto:sopheaktra.yong@outlook.com"><i class="fa fa-envelope"></i> sopheaktra.yong@outlook.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><%= image_tag "home/logo.png" %></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="account.html"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html">Home</a></li>
+								<li class="dropdown"><a href="#">Shop By<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="product-details.html">Households</a></li>
+										<li><a href="product-details.html">Electronics</a></li> 
+										<li><a href="product-details.html">Clothing</a></li> 
+										<li><a href="product-details.html">Bags</a></li> 
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Drop us a hint here"/>
+							<!--<img class="mouseover" onclick="search()" src="./images/home/searchicon.png" />-->
+							<%= image_tag "home/searchicon.png" %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+	<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Help</li>
+				</ol>
+			</div><!--/breadcrums-->
+		</div>
+	</section> <!--/#cart_items-->
+
+	<div id="contact-page" class="container">
+		<div class="bg">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="contact-info">
+						<h1> Follow basic steps to start selling your product!</h1>
+						<br />
+						<h2 class="title text-center">List It</h2>
+						<p>
+							<b> Describe your items </b>
+							<br />
+							<i> Start by simply telling us what you're selling or renting.</i>
+							<br />
+							<br />
+						</p>
+					</div>
+					<div class="contact-info">
+						<h2 class="title text-center">Bid!</h2>
+						<p>
+							<b> Let your items get bid! </b>
+							<br />
+							<i> You may put the deadline if you wish.</i>
+							<br />
+							<br />
+						</p>
+					</div>
+					<div class="contact-info">
+						<h2 class="title text-center">Meet Up & Get Paid</h2>
+							<p> Arrange the place & date delivering the items and get paid! </p>
+							<br />
+							<br />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer"><!--Footer-->
+		
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Service</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="online_help.html">Help</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Quick Shop</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="product-details.html">T-Shirt</a></li>
+								<li><a href="product-details.html">Table</a></li>
+								<li><a href="product-details.html">Phone</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Policies</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="term.html">Terms of Use</a></li>
+								<li><a href="privacypolicy.html">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>About Us</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="company_info.html">Company Information</a></li>
+								<li><a href="contact-us.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Subscribe!</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2015 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by Pheaktra</p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+		
+
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
