@@ -1,2 +1,47 @@
-<h1>StaticPages#aboutus</h1>
-<p>Find me in app/views/static_pages/aboutus.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>E-Shopper</title>
+</head><!--/head-->
+
+<body>
+	
+	<%= render 'header' %>
+
+	<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="index">Home</a></li>
+				  <li class="active">About Us</li>
+				</ol>
+			</div><!--/breadcrums-->
+		</div>
+	</section> <!--/#cart_items-->
+
+	<div id="contact-page" class="container">
+		<div class="bg">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="contact-info">
+						<h2 class="title text-center">Our Stories</h2>
+							<stories>
+								<p>
+									We started building this plateform because we experienced lots of problems living in Japan trying to dispose things after graduation or moving to other region of the Country (because we couldn't speak Japanese, maybe). It was ridiculous to me at first when somebody told me that I have to pay some sort of money when I wish to dispose my refrigerator or washing machine. I was like, WTF! Therefore, We were thinking of creating a plateform where everyone (especially foreigners) form a community and start helping each other in the mean of buying and selling any things instead of just paying to the disposal company not to the people in needed!
+								</p>
+								<br />
+							</stories>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%= render 'footer' %>
+		
+</body>
+</html>

@@ -1,8 +1,27 @@
 Rails.application.routes.draw do
-  root 'static_pages#help'
+ 
+  #localhost
+  root 'home#index'
 
+  #static pages -  localhost/action
   get 'help' => 'static_pages#help'
   get 'aboutus' => 'static_pages#aboutus'
+  get 'term' => 'static_pages#term'
+  get 'policy' => 'static_pages#policy'
+  get 'contact' => 'static_pages#contact'
+
+  #Home
+  get 'index' => 'home#index'
+
+  #Account
+  get 'login' => 'account#login'
+  get 'profile' => 'account#profile'
+  get 'logout' => 'account#logout'
+  
+  #Product
+  get 'product/:id' => 'product#show'
+
+  #match 'static_pages/:action', :controller => "static_pages"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

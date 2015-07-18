@@ -1,0 +1,81 @@
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="tel:+818044811168"><i class="fa fa-phone"></i> +81 080 4481 1168</a></li>
+								<li><a href="mailto:sopheaktra.yong@outlook.com"><i class="fa fa-envelope"></i> sopheaktra.yong@outlook.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<%= link_to(image_tag("home/logo.png"), root_path) %>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><%= link_to "Profile", {:controller => 'account', :action => 'profile'} %></li>
+								<li><%= link_to "login", {:controller => 'account', :action => 'login'} %></li>
+								<li><%= link_to "logout", {:controller => 'account', :action => 'logout'} %></li>
+								<!--
+								<li><a href="account">Account</a></li>  hide unless login
+								<li><a href="login">Login</a></li>   show unless already login
+								<a href="logout">Logout</a></li>  hide unless login
+								--> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><%= link_to "Home", root_path %></li>
+								<li class="dropdown"><%= link_to "Shop By", {:controller => 'product', :action => 'show', id: 1} %>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="product-details.html">Households</a></li>
+										<li><a href="product-details.html">Electronics</a></li> 
+										<li><a href="product-details.html">Clothing</a></li> 
+										<li><a href="product-details.html">Bags</a></li> 
+                                    </ul>
+                                </li> 
+								<li><%= link_to "Contact", {:controller => 'static_pages', :action => 'contact'} %></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Drop us a hint here"/>
+							<!--<img class="mouseover" onclick="search()" src="/app/assets/images/home/searchicon.png" />-->
+							<%= image_tag "home/searchicon.png" %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
