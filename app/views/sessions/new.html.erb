@@ -4,11 +4,7 @@
 					<div class="col-sm-6">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						    <%= form_for(@user) do |f| %>
-						      <%= render 'shared/error_messages' %>
-
-						      <%= f.label :name %>
-						      <%= f.text_field :name, class: 'form-control' %>
+						    <%= form_for(:session, url: login_path) do |f| %>
 
 						      <%= f.label :email %>
 						      <%= f.email_field :email, class: 'form-control' %>
@@ -16,11 +12,10 @@
 						      <%= f.label :password %>
 						      <%= f.password_field :password, class: 'form-control' %>
 
-						      <%= f.label :password_confirmation, "Confirmation" %>
-						      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-						      <%= f.submit "Create my account", class: "btn btn-primary" %>
+						      <%= f.submit "Log in", class: "btn btn-primary" %>
 						    <% end %>
+
+						    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 					</div><!--/sign up form-->
 				</div>
 			</div>

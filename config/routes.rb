@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  get 'sessions/new'
+
   get 'users/new'
 
   #localhost
@@ -19,16 +21,21 @@ Rails.application.routes.draw do
   #get 'login' => 'account#login'
   #get 'profile' => 'account#profile'
   #get 'logout' => 'account#logout'
-  match '/login',    to: 'account#login',    via: 'get'
-  match '/logout',    to: 'account#logout',    via: 'get'
-  match '/profile',    to: 'account#profile',    via: 'get'
+  #match '/login',    to: 'account#login',    via: 'get'
+  #match '/logout',    to: 'account#logout',    via: 'get'
+  #match '/profile',    to: 'account#profile',    via: 'get'
   
   #Product
   get 'product/:id' => 'product#show'
 
-  #User
+  #User 
   get 'signup'  => 'users#new'
   resources :users
+
+  #Sessions
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
 #GET /users  index users_path  page to list all users
 #GET /users/1  show  user_path(user) page to show user
