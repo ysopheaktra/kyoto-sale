@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  get 'users/new'
+
   #localhost
   root 'home#index'
 
@@ -14,13 +16,28 @@ Rails.application.routes.draw do
   get 'index' => 'home#index'
 
   #Account
-  get 'login' => 'account#login'
-  get 'profile' => 'account#profile'
-  get 'logout' => 'account#logout'
+  #get 'login' => 'account#login'
+  #get 'profile' => 'account#profile'
+  #get 'logout' => 'account#logout'
+  match '/login',    to: 'account#login',    via: 'get'
+  match '/logout',    to: 'account#logout',    via: 'get'
+  match '/profile',    to: 'account#profile',    via: 'get'
   
   #Product
   get 'product/:id' => 'product#show'
 
+  #User
+  get 'signup'  => 'users#new'
+  resources :users
+
+#GET /users  index users_path  page to list all users
+#GET /users/1  show  user_path(user) page to show user
+#GET /users/new  new new_user_path page to make a new user (signup)
+#POST  /users  create  users_path  create a new user
+#GET /users/1/edit edit  edit_user_path(user)  page to edit user with id 1
+#PATCH /users/1  update  user_path(user) update user
+#DELETE  /users/1  destroy user_path(user) delete user
+  
   #match 'static_pages/:action', :controller => "static_pages"
 
   # The priority is based upon order of creation: first created -> highest priority.

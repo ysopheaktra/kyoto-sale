@@ -25,14 +25,10 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><%= link_to "Profile", {:controller => 'account', :action => 'profile'} %></li>
-								<li><%= link_to "login", {:controller => 'account', :action => 'login'} %></li>
-								<li><%= link_to "logout", {:controller => 'account', :action => 'logout'} %></li>
-								<!--
-								<li><a href="account">Account</a></li>  hide unless login
-								<li><a href="login">Login</a></li>   show unless already login
-								<a href="logout">Logout</a></li>  hide unless login
-								--> 
+								<li><a href="/profile">Account</a></li>  
+								<li><a href="/login">Login</a></li>   
+								<li><a href="/logout">Logout</a></li> 
+								<li><%= link_to "Sign up now!", signup_path %> </li>
 							</ul>
 						</div>
 					</div>

@@ -5,5 +5,4 @@ class AccountController < ApplicationController
   end
   def profile
   end
-  
 end

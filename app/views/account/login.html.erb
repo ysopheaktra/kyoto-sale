@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>E-Shopper</title>
-</head><!--/head-->
 
-<body>
-	
-	<%= render '/static_pages/header' %>
-
-	<section id="cart_items">
-		<div class="container">
-			<div class="breadcrumbs">
-				<ol class="breadcrumb">
-				  <li><a href="index">Home</a></li>
-				  <li class="active">Login</li>
-				</ol>
-			</div><!--/breadcrums-->
-		</div>
-	</section> <!--/#cart_items-->
 	
 	<div id="contact-page" class="container">
     	<div class="bg">
     		<div class="row">  	
-				<div class="col-sm-4 col-sm-offset-1">
+				<div class="col-sm-6">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
 						<form action="#">
@@ -40,20 +17,6 @@
 						</form>
 					</div><!--/login form-->
 				</div>
-				<div class="col-sm-1">
-					<h2 class="or">OR</h2>
-				</div>
-				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" required/>
-							<input type="email" placeholder="Email Address" required/>
-							<input type="password" placeholder="Password" required/>
-							<button type="submit" class="btn btn-default">Signup</button>
-						</form>
-					</div><!--/sign up form-->
-				</div>
 			</div>
 		</div>
 	</div><!--/form-->
@@ -61,7 +24,3 @@
 	<br />
 	<br />
 	
-	<%= render '/static_pages/footer' %>
-		
-</body>
-</html>
