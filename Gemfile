@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# show list of user
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # encrypt password
 gem 'bcrypt', '3.1.7'
 
