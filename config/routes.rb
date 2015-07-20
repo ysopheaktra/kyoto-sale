@@ -44,8 +44,16 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-
+  #Account Activation
+  resources :account_activations, only: [:edit]
   
+  #Micropost
+  resources :microposts,          only: [:create, :destroy]
+  get 'static_pages/home' => 'static_pages#home'
+
+  #POST  /microposts create  create a new micropost
+  #DELETE  /microposts/1 destroy delete micropost with id 1
+
   #match 'static_pages/:action', :controller => "static_pages"
 
   # The priority is based upon order of creation: first created -> highest priority.
