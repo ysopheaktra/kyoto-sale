@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
- 
-  get 'sessions/new'
-
-  get 'users/new'
-
   #localhost
-  root 'home#index'
+  root 'products#home'
 
   #static pages -  localhost/action
   get 'help' => 'static_pages#help'
@@ -15,7 +10,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
 
   #Home
-  get 'index' => 'home#index'
+  get 'index' => 'products#home'
 
   #Account
   #get 'login' => 'account#login'
@@ -26,7 +21,8 @@ Rails.application.routes.draw do
   #match '/profile',    to: 'account#profile',    via: 'get'
   
   #Product
-  get 'product/:id' => 'product#show'
+  resources :products
+  
 
   #User 
   get 'signup'  => 'users#new'
@@ -49,6 +45,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   
   #Micropost
+  match '/microposts/create',    to: 'microposts#create',    via: 'post'
   resources :microposts,          only: [:create, :destroy]
   get 'static_pages/home' => 'static_pages#home'
 

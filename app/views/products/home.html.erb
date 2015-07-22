@@ -1,0 +1,15 @@
+<% provide(:title, 'Home') %>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="features_items">
+			<h2 class="title text-center">Latest Items</h2>
+			<ul>
+			    <%= render @products %>
+			</ul>	
+		</div>
+		<%= will_paginate %>
+	</div>
+	
+</div>
+<br />
+

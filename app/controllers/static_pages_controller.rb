@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
 
   def home
-    @micropost = current_user.microposts.build if logged_in?
+    @product = Product.find(1)
+    @micropost = @product.microposts.build
   end
 
   def help

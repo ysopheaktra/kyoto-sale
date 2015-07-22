@@ -1,13 +1,16 @@
 class MicropostsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
-
+  
+ 
   def create
-    @micropost = current_user.microposts.build(micropost_params)
+    @product = Product.find(session[:product_id])
+    @micropost = @product.microposts.build(micropost_params)
+    @micropost.content = current_user.name + ": " + @micropost.content
     if @micropost.save
-      flash[:success] = "Micropost created!"
-      redirect_to root_url
+      flash[:success] = "Success"
+      redirect_to @product
     else
-      render 'static_pages/home'
+      flash[:fail] = "fail"
     end
   end
 
@@ -17,6 +20,6 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :picture)
+      params.require(:micropost).permit(:content)
     end
 end

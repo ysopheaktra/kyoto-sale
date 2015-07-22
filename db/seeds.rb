@@ -11,9 +11,3 @@ User.create!(name:  "Sopheaktra Yong",
              password:              "123456",
              password_confirmation: "123456",
              admin: true)
-
-users = User.order(:created_at).take(6)
-50.times do
-  content = "Testing comments"
-  users.each { |user| user.microposts.create!(content: content) }
-end

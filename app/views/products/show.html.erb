@@ -1,0 +1,63 @@
+
+<% provide(:title, @product.name) %>
+
+<div class="row">
+	<div class="col-sm-12 padding-left">
+		<div class="product-details"><!--product-details-->
+			<div class="col-sm-5">
+				<div class="view-product">
+					<%= image_tag @product.picture.url if @product.picture? %>
+				</div>
+				
+			</div>
+			<div class="col-sm-7">
+				<div class="product-information"><!--/product-information-->
+					<h2><%= @product.name %></h2>
+					<p><b>Product ID:</b> <%= @product.id %></p>
+					<span>
+						<span>$<%= @product.price %></span>
+					</span>
+					<p><b>Availability:</b> <% if @product.sold %> SOLD <% else %> In Stock <% end %> </p>
+					<p><b>Description:</b> <%= @product.description %></p>
+				</div><!--/product-information-->
+			</div>
+		</div><!--/product-details-->
+		
+		<div class="category-tab shop-details-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li><a href="#allcomments" data-toggle="tab">All Comments</a></li>
+								<li class="active"><a href="#yours" data-toggle="tab">Input Yours!</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							
+							<div class="tab-pane fade" id="allcomments" >
+								<div class="col-sm-12">
+									<% @microposts.each do |micropost| %>
+									<li id="micropost-<%= micropost.id %>">
+									  <span class="content">
+									  	<%= micropost.content %> <i> -- Posted <%= time_ago_in_words(micropost.created_at) %> ago </i>
+									  	<br /><br />
+									  </span>
+									</li>
+									<% end %>
+									<%= will_paginate @microposts %>	   	
+								</div>
+								
+							</div>
+														
+								<div class="tab-pane fade active in" id="yours" >
+									<div class="col-sm-12">
+										Say something nice to seller: <br />
+										<section class="micropost_form">
+								        	<%= render 'shared/micropost_form' %>
+								         </section>
+												
+									</div>
+								</div>
+						</div>
+		</div><!--/category-tab-->
+
+	</div>
+</div>

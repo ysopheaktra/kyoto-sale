@@ -11,18 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720151123) do
+ActiveRecord::Schema.define(version: 20150722115614) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
-    t.integer  "user_id"
+    t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "picture"
   end
 
-  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
+  add_index "microposts", ["product_id", "created_at"], name: "index_microposts_on_product_id_and_created_at"
+  add_index "microposts", ["product_id"], name: "index_microposts_on_product_id"
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.float    "price"
+    t.string   "description"
+    t.boolean  "sold",        default: false
+    t.string   "picture"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "products", ["id", "created_at"], name: "index_products_on_id_and_created_at"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
