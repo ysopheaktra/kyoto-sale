@@ -43,7 +43,8 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-
+  match '/logout2',    to: 'sessions#destroy',    via: 'get'
+  
   #Account Activation
   resources :account_activations, only: [:edit]
   
