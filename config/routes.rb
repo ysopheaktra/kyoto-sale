@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   #match '/profile',    to: 'account#profile',    via: 'get'
   
   #Product
+  get 'products/search' => 'products#search'
+  get 'products/newitem' => 'products#newitem'
   resources :products
   
 
@@ -47,7 +49,7 @@ Rails.application.routes.draw do
   #Micropost
   match '/microposts/create',    to: 'microposts#create',    via: 'post'
   resources :microposts,          only: [:create, :destroy]
-  get 'static_pages/home' => 'static_pages#home'
+  #get 'static_pages/home' => 'static_pages#home'
 
   #POST  /microposts create  create a new micropost
   #DELETE  /microposts/1 destroy delete micropost with id 1

@@ -1,0 +1,19 @@
+<% provide(:title, 'Home') %>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="features_items">
+			<h2 class="title text-center">Search Results</h2>
+			<% if @products.empty? %>
+				<p> Could not find with your keyword. You may search with <i>ID</i>, <i>Name</i>, and <i>Descrition</i> of the products. </p>
+			<% end %>
+			<ul>
+			    <%= render @products %>
+			</ul>	
+		</div>
+		<div class="center"><%= will_paginate %></div>
+		
+	</div>
+	
+</div>
+<br />
+

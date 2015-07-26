@@ -3,7 +3,7 @@
 		<div class="single-products">
 				<div class="productinfo text-center">
 					<%= image_tag product.picture.url if product.picture? %>
-					<h2>$<%= product.price %></h2>
+					<h2>¥<%= product.price %></h2>
 					<p><%= product.name %></p>
 					<%= link_to "Detail", product %>
 					<% if logged_in? && current_user.admin? %>    

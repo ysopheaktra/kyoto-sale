@@ -1,6 +1,21 @@
 class ProductsController < ApplicationController
   before_action :admin_user,     only: [:destroy, :edit, :update, :create, :new]
 
+  def newitem
+    @products = Product.where(:sold => true).paginate(page: params[:page], :per_page => 6)
+    #DAY(birth_date) = ? AND MONTH(birth_date) = ?", Date.today.day, Date.today.month]
+  end
+
+  def search
+     @query = params[:search]
+     if @query.empty?
+      redirect_to :action => 'home'
+     else
+      @name = "%" + @query + "%"
+      @products = Product.where("sold = ? AND (id = ? OR name LIKE ? OR description LIKE ?)", false, @query, @name, @name).paginate(page: params[:page], :per_page => 6)
+     end
+  end
+
   def home
      @products = Product.where(:sold => false).paginate(page: params[:page], :per_page => 6)
   end
@@ -12,6 +27,7 @@ class ProductsController < ApplicationController
   def new
   	@product = Product.new
   end
+  
   def show
   	@product = Product.find(params[:id])
     @microposts = @product.microposts.paginate(page: params[:page], :per_page => 10)

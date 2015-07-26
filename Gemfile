@@ -58,10 +58,10 @@ group :development, :test do
 	gem 'sqlite3'
 end
 
-gem 'rails_12factor'
+
 
 group :production do 
-	
+	gem 'rails_12factor'
 	gem 'pg'
 end
 
