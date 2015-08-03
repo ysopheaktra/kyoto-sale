@@ -10,8 +10,6 @@
 					  | <%= link_to "edit", edit_product_path(product) %>     
 					  | <%= link_to "delete", product, method: :delete,
 					                              data: { confirm: "You sure?" } %>  
-					  | <%= link_to "del", "/products/delete/" + product.id.to_s, method: :post
-					                              %>         
 					  <% end %>
 				</div>
 		</div>
