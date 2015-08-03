@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
-  before_action :admin_user,     only: [:destroy, :edit, :update, :create, :new]
+  before_action :admin_user,     only: [:destroy, :edit, :update, :create, :new] #only admin user can alter products
 
+  #paginate -> limite number of records per page
   def newitem
     @products = Product.where(:sold => true).paginate(page: params[:page], :per_page => 6)
     #DAY(birth_date) = ? AND MONTH(birth_date) = ?", Date.today.day, Date.today.month]

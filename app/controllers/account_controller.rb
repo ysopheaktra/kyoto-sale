@@ -1,8 +1,3 @@
 class AccountController < ApplicationController
-  def login
-  end
-  def logout
-  end
-  def profile
-  end
+	#for future work- store account linked to facebook, twitter, ...
 end

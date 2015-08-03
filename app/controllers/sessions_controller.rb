@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  #handle login logout and session of users
    def new
    end
 

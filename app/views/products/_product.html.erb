@@ -1,8 +1,9 @@
+<!-- Render for each product -->
 <div class="col-sm-4">
 	<div class="product-image-wrapper">
 		<div class="single-products">
 				<div class="productinfo text-center">
-					<%= image_tag product.picture.url if product.picture? %>
+					<%= image_tag product.picture.url, size: "308x280" if product.picture? %>
 					<h2>¥<%= product.price.to_i %></h2>
 					<p><%= product.name %></p>
 					<%= link_to "Detail", product %>

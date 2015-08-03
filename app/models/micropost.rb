@@ -3,7 +3,7 @@ class Micropost < ActiveRecord::Base
   # sort comment DES
   default_scope -> { order(created_at: :desc) }
   # for impage upload
-  mount_uploader :picture, PictureUploader
+  mount_uploader :picture, PictureUploader  #for future work - allowing user to also upload images to their comments
   validates :product_id, presence: true
   validates :content, presence: true, length: { maximum: 250 }
   validate  :picture_size

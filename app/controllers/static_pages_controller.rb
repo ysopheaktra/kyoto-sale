@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-
+  #for all staticpages
   def home
     @product = Product.find(1)
     @micropost = @product.microposts.build

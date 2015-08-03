@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
 	validates :name, presence: true
   	validates :price, presence: true, numericality: true
   	validates :picture, presence: true
-  	mount_uploader :picture, PictureUploader
+  	mount_uploader :picture, PictureUploader #handle image uploading
   	validate  :picture_size
 
   	private
