@@ -3,14 +3,15 @@
 		<div class="single-products">
 				<div class="productinfo text-center">
 					<%= image_tag product.picture.url if product.picture? %>
-					<h2>¥<%= product.price %></h2>
+					<h2>¥<%= product.price.to_i %></h2>
 					<p><%= product.name %></p>
 					<%= link_to "Detail", product %>
 					<% if logged_in? && current_user.admin? %>    
 					  | <%= link_to "edit", edit_product_path(product) %>     
 					  | <%= link_to "delete", product, method: :delete,
 					                              data: { confirm: "You sure?" } %>  
-					  | <%= link_to "del", product_path(product), method: :delete %>                
+					  | <%= link_to "del", "/products/delete/" + product.id.to_s, method: :post
+					                              %>         
 					  <% end %>
 				</div>
 		</div>

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #Product
   get 'products/search' => 'products#search'
   get 'products/newitem' => 'products#newitem'
+  match 'products/delete/:id',    to: 'products#destroy',    via: 'post'
   resources :products
   
 

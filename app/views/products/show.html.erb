@@ -15,7 +15,7 @@
 					<h2><%= @product.name %></h2>
 					<p><b>Product ID:</b> <%= @product.id %></p>
 					<span>
-						<span>¥<%= @product.price %></span>
+						<span>¥<%= @product.price.to_i %></span>
 					</span>
 					<p><b>Availability:</b> <% if @product.sold %> SOLD <% else %> In Stock <% end %> </p>
 					<p><b>Description:</b> <%= @product.description %></p>
